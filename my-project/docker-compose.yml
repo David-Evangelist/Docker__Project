@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=mongodb+srv://dbAdmin:CXI8xDbM5YYRPIS0@cluster0.lu0bsyj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0sua_string_de_conexao_do_Atlas
+    restart: always
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "4200:80"
+    depends_on:
+      - backend
+    restart: always
