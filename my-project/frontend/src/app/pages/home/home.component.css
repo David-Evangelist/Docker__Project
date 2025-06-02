@@ -1,0 +1,180 @@
+/* Styles gerais para as 3 telas */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 400px;
+    width: 90%;
+    margin: 0 auto;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    /* Cresce conforme o conteúdo */
+    min-height: 60vh;
+    padding: 30px 25px;
+    background-color: #f0f2f5;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+  }
+  
+  /* Títulos */
+  h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    color: #4b3f72;
+    width: 100%;
+  }
+  
+  /* Inputs */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="cpf"] {
+    width: 100%;
+    padding: 0.65rem 1rem;
+    margin-bottom: 1.2rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus,
+  input[type="cpf"]:focus {
+    border-color: #764ba2;
+    outline: none;
+    box-shadow: 0 0 8px #a07fe8;
+  }
+  
+  /* Botões */
+  button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #764ba2;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.15s ease;
+  }
+  
+  button:hover {
+    background-color: #5c3780;
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    transform: translateY(1px);
+  }
+  
+  /* Mensagem de erro/sucesso */
+  .mensagem {
+    margin-bottom: 1rem;
+    padding: 0.9rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .mensagem.erro {
+    background-color: #f8d7da;
+    color: #842029;
+  }
+  
+  .mensagem.sucesso {
+    background-color: #d1e7dd;
+    color: #0f5132;
+  }
+  
+  /* Lista de usuários (tela início) */
+  .lista-usuarios {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 350px;
+    overflow-y: auto;
+    border-top: 1px solid #ddd;
+    width: 100%;
+  }
+  
+  .lista-usuarios li {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    color: #4b3f72;
+  }
+  
+  .lista-usuarios li:nth-child(even) {
+    background-color: #f5f1ff;
+  }
+  
+  /* Botão remover na lista */
+  .lista-usuarios button {
+    width: auto;
+    padding: 0.3rem 0.7rem;
+    background: #e03e3e;
+    font-size: 0.85rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .lista-usuarios button:hover {
+    background-color: #b73131;
+  }
+  
+  /* Link para mudar entre telas */
+  .link-tela {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+    color: #764ba2;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+    width: 100%;
+  }
+  
+  .link-tela:hover {
+    color: #5c3780;
+  }
+  
+  /* Scrollbar personalizada para lista */
+  .lista-usuarios::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .lista-usuarios::-webkit-scrollbar-track {
+    background: #f0eefa;
+    border-radius: 10px;
+  }
+  
+  .lista-usuarios::-webkit-scrollbar-thumb {
+    background: #764ba2;
+    border-radius: 10px;
+  }
+  
