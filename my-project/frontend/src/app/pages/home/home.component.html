@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Usuários Cadastrados</h1>
+
+  <ul class="lista-usuarios" *ngIf="usuarios.length > 0; else vazio">
+    <li *ngFor="let usuario of usuarios">
+      <div>
+        <strong>{{ usuario.nome }}</strong><br />
+        <small>{{ usuario.email }} | CPF: {{ usuario.cpf }}</small>
+      </div>
+      <button (click)="remover(usuario._id)">Remover</button>
+    </li>
+  </ul>
+
+  <ng-template #vazio>
+    <p>Nenhum usuário cadastrado.</p>
+  </ng-template>
+
+  <a (click)="logout()" class="link-tela">Sair</a>
+</div>
