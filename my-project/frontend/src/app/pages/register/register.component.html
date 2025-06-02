@@ -1,0 +1,37 @@
+<div class="container">
+  <h1>Cadastro</h1>
+
+  <div *ngIf="mensagem" [class]="mensagem.includes('sucesso') ? 'mensagem sucesso' : 'mensagem erro'">
+    {{ mensagem }}
+  </div>
+
+  <form (ngSubmit)="cadastrar()">
+    <input
+      type="text"
+      placeholder="Nome"
+      [(ngModel)]="usuario.nome"
+      name="nome"
+      required
+    />
+
+    <input
+      type="email"
+      placeholder="Email"
+      [(ngModel)]="usuario.email"
+      name="email"
+      required
+    />
+
+    <input
+      type="text"
+      placeholder="CPF"
+      [(ngModel)]="usuario.cpf"
+      name="cpf"
+      required
+    />
+
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <a routerLink="/login" class="link-tela">Já tem conta? Faça login</a>
+</div>
