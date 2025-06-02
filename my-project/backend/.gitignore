@@ -28,3 +28,10 @@ temp/
 # Outros
 *.bak
 *.swp
+
+# Angular
+/.angular
+.env
+package-lock.json
+.idea
+
