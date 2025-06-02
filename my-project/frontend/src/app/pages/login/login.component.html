@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>Login</h1>
+
+  <div *ngIf="mensagem" class="mensagem erro">
+    {{ mensagem }}
+  </div>
+
+  <form (ngSubmit)="login()">
+    <input
+      type="email"
+      placeholder="Email"
+      [(ngModel)]="dados.email"
+      name="email"
+      required
+    />
+
+    <input
+      type="text"
+      placeholder="CPF"
+      [(ngModel)]="dados.cpf"
+      name="cpf"
+      required
+    />
+
+    <button type="submit">Entrar</button>
+  </form>
+
+  <a routerLink="/register" class="link-tela">Não tem conta? Cadastre-se</a>
+</div>
