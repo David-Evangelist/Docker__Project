@@ -5,8 +5,8 @@ services:
     build: ./backend
     ports:
       - "3000:3000"
-    environment:
-      - MONGO_URI=mongodb+srv://dbAdmin:CXI8xDbM5YYRPIS0@cluster0.lu0bsyj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0sua_string_de_conexao_do_Atlas
+    env_file:
+      - ./backend/.env
     restart: always
 
   frontend:
