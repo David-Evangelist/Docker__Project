@@ -8,6 +8,10 @@ services:
     env_file:
       - ./backend/.env
     restart: always
+    depends_on:
+      - zabbix-server
+  environment:
+    ZBX_SERVER_HOST: zabbix-server
 
   frontend:
     build: ./frontend
@@ -15,4 +19,7 @@ services:
       - "4200:80"
     depends_on:
       - backend
+      - zabbix-server
     restart: always
+environment:
+  ZBX_SERVER_HOST: zabbix-server
