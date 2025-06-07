@@ -13,9 +13,12 @@ FROM nginx:alpine
 # Copiar arquivos de build
 COPY --from=build /app/dist/frontend/browser/. /usr/share/nginx/html/
 
+<<<<<<< HEAD
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copiar config customizada (opcional)
+=======
+>>>>>>> main
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 
