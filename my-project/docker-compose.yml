@@ -16,3 +16,20 @@ services:
     depends_on:
       - backend
     restart: always
+
+  db:
+    image: mysql:8.0
+    container_name: myapp-docker-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: myappdb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user123
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
