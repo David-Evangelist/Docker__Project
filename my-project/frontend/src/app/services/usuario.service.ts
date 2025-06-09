@@ -4,10 +4,10 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 interface Usuario {
+  id?: string;
   nome: string;
   email: string;
   cpf: string;
-  _id?: string;
 }
 
 @Injectable({
@@ -19,7 +19,7 @@ export class UsuarioService {
   constructor(private http: HttpClient) {}
 
   cadastrar(usuario: Usuario): Observable<any> {
-    return this.http.post(`${this.apiUrl}/cadastrar`, usuario);
+    return this.http.post(`${this.apiUrl}/register`, usuario);
   }
 
   listar(): Observable<Usuario[]> {

@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 // Conecta e sincroniza com o banco de dados MySQL
-sequelize.sync()
+sequelize.sync({ alter: true })
   .then(() => console.log("MySQL sincronizado com sucesso!"))
   .catch((err) => console.error("Erro ao conectar ao MySQL:", err));
 

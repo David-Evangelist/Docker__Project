@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
 
   remover(id: string) {
     this.http.delete(`${environment.apiUrl}/usuarios/${id}`).subscribe(() => {
-      this.usuarios = this.usuarios.filter((u) => u._id !== id);
+      this.usuarios = this.usuarios.filter((u) => u.id !== +id);
     });
   }
 
